@@ -1,0 +1,37 @@
+from turtle import * # pip install turtle
+t=Turtle()
+t.shape("circle")
+wn = Screen()
+def right():
+    x = t.xcor()
+    x += 20
+    t.setx(x)
+def left():
+    x = t.xcor()
+    x -= 20
+    t.setx(x)
+def up():
+    y = t.ycor()
+    y += 20
+    t.sety(y)
+def down():
+    y = t.ycor()
+    y -= 20
+    t.sety(y)
+def s():
+    t.speed(0)
+    t.fd(90)
+    t.rt(90)
+    t.fd(90)
+    t.rt(90)
+    t.fd(90)
+    t.rt(90)
+    t.fd(90)
+wn.listen()
+wn.onkeypress(right,"Right")
+wn.onkeypress(left,"Left")
+wn.onkeypress(up,"Up")
+wn.onkeypress(down,"Down")
+wn.onkeypress(s,"s")
+while True:
+    wn.update()
